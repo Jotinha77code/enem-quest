@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ENEM Quest - Biologia</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- TELA INICIAL -->
+
+    <main class="tela-inicial" id="telaInicial">
+
+        <div class="icone">🧬</div>
+
+        <h1>ENEM QUEST</h1>
+
+        <h2>BIOLOGIA</h2>
+
+        <p>
+            Sua jornada pelo ENEM começa aqui.
+        </p>
+
+        <button onclick="iniciarJogo()">
+            ▶️ COMEÇAR
+        </button>
+
+    </main>
+
+
+
+    <!-- TELA DE ESCOLHA DO ANO -->
+
+    <main class="tela-anos" id="telaAnos">
+
+        <div class="icone">🧬</div>
+
+        <h1>ENEM QUEST</h1>
+
+        <h2>ESCOLHA O ANO</h2>
+
+        <div class="anos">
+
+            <button onclick="abrirAno(2015)">2015</button>
+
+            <button onclick="abrirAno(2016)">2016</button>
+
+            <button onclick="abrirAno(2017)">2017</button>
+
+            <button onclick="abrirAno(2018)">2018</button>
+
+            <button onclick="abrirAno(2019)">2019</button>
+
+            <button onclick="abrirAno(2020)">2020</button>
+
+            <button onclick="abrirAno(2021)">2021</button>
+
+            <button onclick="abrirAno(2022)">2022</button>
+
+            <button onclick="abrirAno(2023)">2023</button>
+
+            <button onclick="abrirAno(2024)">2024</button>
+
+            <button onclick="abrirAno(2025)">2025</button>
+
+            <button onclick="abrirAno(2026)">2026</button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- TELA DA QUESTÃO -->
+
+    <main class="tela-questao" id="telaQuestao">
+
+        <div class="cabecalho-questao">
+
+            <span>ENEM QUEST</span>
+
+            <span id="anoQuestao">
+                ENEM 2015
+            </span>
+
+        </div>
+
+
+        <h2 id="numeroQuestao">
+            Questão 01
+        </h2>
+
+
+        <p class="pergunta" id="pergunta">
+            Carregando questão...
+        </p>
+
+
+        <div class="alternativas" id="alternativas">
+        </div>
+
+
+        <div id="resultado">
+        </div>
+
+
+        <button
+            id="botaoProxima"
+            onclick="proximaQuestao()"
+            style="display: none;"
+        >
+            PRÓXIMA QUESTÃO ➡️
+        </button>
+
+    </main>
+
+
+
+    <!-- TELA DE RESULTADO -->
+
+    <main class="tela-resultado" id="telaResultado">
+
+        <div class="icone">🏆</div>
+
+        <h1>ENEM QUEST</h1>
+
+        <h2>ANO CONCLUÍDO!</h2>
+
+        <p id="resultadoFinal">
+            Sua pontuação aparecerá aqui.
+        </p>
+
+        <button onclick="voltarAnos()">
+            🔄 VOLTAR AOS ANOS
+        </button>
+
+    </main>
+
+
+
+    <script src="jogo.js"></script>
+
+</body>
+
+</html>
