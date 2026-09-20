@@ -4,277 +4,291 @@
     box-sizing: border-box;
 }
 
-
 body {
-
-    font-family: Arial, sans-serif;
-
-    background: #0b1020;
-
-    color: white;
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b18;
+    color: #ffffff;
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
+    padding: 20px;
 }
 
-
-/* TELA INICIAL */
+.tela-inicial,
+.tela-anos,
+.tela-questao,
+.tela-resultado {
+    width: 100%;
+    max-width: 850px;
+}
 
 .tela-inicial {
-
     text-align: center;
-
-    width: 90%;
-
-    max-width: 500px;
-
-    padding: 40px 25px;
-
+    padding: 55px 35px;
+    background: linear-gradient(145deg, #111936, #0c1228);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
-
 
 .icone {
-
-    font-size: 80px;
-
+    font-size: 75px;
     margin-bottom: 20px;
-
 }
 
-
-h1 {
-
-    font-size: 48px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 5px;
-
+.tela-inicial h1,
+.tela-anos h1,
+.tela-resultado h1 {
+    font-size: clamp(36px, 7vw, 60px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
 }
 
-
-h2 {
-
-    font-size: 24px;
-
-    letter-spacing: 8px;
-
+.tela-inicial h2,
+.tela-anos h2,
+.tela-resultado h2 {
+    font-size: 22px;
+    letter-spacing: 6px;
+    color: #7dd3fc;
     margin-bottom: 25px;
-
 }
 
-
-p {
-
+.tela-inicial p,
+.tela-anos p,
+.tela-resultado p {
+    color: #b8c0d4;
     font-size: 18px;
-
-    color: #c7c9d3;
-
+    line-height: 1.6;
     margin-bottom: 35px;
-
 }
-
 
 button {
-
     border: none;
-
-    padding: 18px 45px;
-
-    border-radius: 12px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
+    outline: none;
     cursor: pointer;
-
-    background: white;
-
-    color: #0b1020;
-
-    transition: 0.2s;
-
+    font-family: inherit;
+    font-weight: 700;
+    transition: 0.2s ease;
 }
-
 
 button:hover {
-
-    transform: scale(1.05);
-
+    transform: translateY(-2px);
 }
 
+button:active {
+    transform: translateY(0);
+}
 
+.tela-inicial button {
+    padding: 17px 45px;
+    border-radius: 14px;
+    font-size: 18px;
+    background: #ffffff;
+    color: #080d1d;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.12);
+}
 
-/* TELA DOS ANOS */
+.tela-inicial button:hover {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+}
 
 .tela-anos {
-
     display: none;
-
     text-align: center;
-
-    width: 90%;
-
-    max-width: 600px;
-
-    padding: 40px 25px;
-
+    padding: 45px 35px;
+    background: linear-gradient(145deg, #111936, #0c1228);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
 
+.tela-anos .icone {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
 
 .tela-anos h1 {
-
-    margin-bottom: 10px;
-
+    font-size: 40px;
 }
-
 
 .tela-anos h2 {
-
     margin-bottom: 35px;
-
 }
-
 
 .anos {
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 15px;
-
 }
-
 
 .anos button {
-
-    padding: 20px 10px;
-
-    border-radius: 12px;
-
+    min-height: 65px;
+    border-radius: 14px;
     font-size: 18px;
-
+    background: #ffffff;
+    color: #0b1020;
 }
 
-
-
-/* TELA DA QUESTÃO */
+.anos button:hover {
+    background: #7dd3fc;
+}
 
 .tela-questao {
-
     display: none;
-
-    width: 90%;
-
-    max-width: 700px;
-
-    padding: 30px;
-
+    padding: 35px;
+    background: #10172d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
-
 
 .cabecalho-questao {
-
     display: flex;
-
     justify-content: space-between;
-
-    margin-bottom: 30px;
-
-    color: #c7c9d3;
-
-    font-weight: bold;
-
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.cabecalho-questao span:first-child {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.cabecalho-questao span:last-child {
+    color: #7dd3fc;
+    font-weight: 700;
+}
+
+#numeroQuestao {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
 
 .pergunta {
-
-    line-height: 1.6;
-
+    color: #e6e9f0;
+    font-size: 18px;
+    line-height: 1.7;
     margin-bottom: 25px;
-
 }
-
 
 .alternativas {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 15px;
-
-    margin-top: 25px;
-
+    gap: 12px;
+    margin-top: 20px;
 }
-
 
 .alternativas button {
-
     width: 100%;
-
-    padding: 16px 20px;
-
+    padding: 17px 20px;
     text-align: left;
-
-    border-radius: 10px;
-
-    border: 2px solid transparent;
-
+    border-radius: 13px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    background: #f7f8fa;
+    color: #111827;
     font-size: 16px;
-
+    line-height: 1.5;
 }
 
+.alternativas button:hover {
+    border-color: #7dd3fc;
+    background: #eefbff;
+    transform: translateX(4px);
+}
 
 #resultado {
-
-    margin-top: 25px;
-
-    font-size: 18px;
-
-    line-height: 1.5;
-
+    margin-top: 22px;
+    font-size: 17px;
+    line-height: 1.6;
 }
-
 
 #botaoProxima {
-
     margin-top: 25px;
-
+    padding: 15px 25px;
+    border-radius: 12px;
+    background: #7dd3fc;
+    color: #07101d;
+    font-size: 16px;
 }
 
-
-
-/* TELA DE RESULTADO */
+#botaoProxima:hover {
+    background: #ffffff;
+}
 
 .tela-resultado {
-
     display: none;
-
     text-align: center;
-
-    width: 90%;
-
-    max-width: 600px;
-
-    padding: 40px 25px;
-
+    padding: 55px 35px;
+    background: linear-gradient(145deg, #111936, #0c1228);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
 }
 
+.tela-resultado .icone {
+    font-size: 80px;
+}
 
 .tela-resultado p {
-
     font-size: 24px;
-
     margin: 30px 0;
+}
 
+.tela-resultado button {
+    padding: 16px 28px;
+    border-radius: 13px;
+    background: #ffffff;
+    color: #0b1020;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .tela-inicial,
+    .tela-anos,
+    .tela-questao,
+    .tela-resultado {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .tela-inicial h1,
+    .tela-anos h1,
+    .tela-resultado h1 {
+        letter-spacing: 3px;
+    }
+
+    .anos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .anos button {
+        min-height: 55px;
+        font-size: 16px;
+    }
+
+    .cabecalho-questao {
+        font-size: 14px;
+    }
+
+    .pergunta {
+        font-size: 17px;
+    }
+
+    .alternativas button {
+        padding: 15px;
+        font-size: 15px;
+    }
 }
